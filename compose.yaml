@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:15.2
+    ports:
+      - 5439:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=test
+    container_name: postgres_test
+    restart: always
